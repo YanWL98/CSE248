@@ -1,93 +1,55 @@
-package p1;
+package sample;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class Book {
 	
-	private int countTile = 0;
 	private String title;
 	private String ISBN;
 	private String author;
 	private String price;
-	private Boolean isReturned = false;
-	
-	
-	public Book() throws FileNotFoundException {
-		super();
-		this.title = setTitle();
-		this.ISBN = setISBN();
-		Name a = new Name();
-		this.author = a.getName();
-		this.price = setPrice();
-		this.isReturned = isReturned();
-	}
+	private Boolean isReturned;
 
 	public String getTitle() {
 		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getISBN() {
 		return ISBN;
 	}
 
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
+	}
+
 	public String getAuthor() {
 		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
 	public String getPrice() {
 		return price;
 	}
-	
-	public Boolean isReturned() {
-		return isReturned;		
-	}
-	
-	public void setIsReturned(Boolean isReturned) {
-		this.isReturned = isReturned;
+
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
-	private String setPrice() {
-		double min = 0.00;
-		double max = 99.99;
-		double randomPrice = (double) (Math.random() * (max - min + 1) + min);
-		String temp = String.format("%.2f", randomPrice);
-		return temp;
-	}
-	
-	private String setTitle() throws FileNotFoundException {
-		String temp;
-		Scanner scanner = new Scanner(new FileInputStream("textbook_titles.txt"));
-		ArrayList<String> titleList = new ArrayList<>();
-		while (scanner.hasNextLine()) {
-			String line = scanner.nextLine();
-			countTile++;
-			titleList.add(line);
-		}
-		int min = 0;
-		int max = countTile;
-		int random = (int) (Math.random() * (max - min + 1) + min);
-		temp = titleList.get(random).toString();
-		return temp;
+	public Boolean getReturned() {
+		return isReturned;
 	}
 
-	private String setISBN() throws FileNotFoundException {
-		int count = 0;
-		String temp;
-		Scanner scanner = new Scanner(new FileInputStream("textbook_isbns.txt"));
-		ArrayList<String> ISBNList = new ArrayList<>();
-		while (scanner.hasNextLine()) {
-			String line = scanner.nextLine();
-			count++;
-			ISBNList.add(line);
-		}
-		int min = 0;
-		int max = count;
-		int random = (int) (Math.random() * (max - min + 1) + min);
-		temp = ISBNList.get(random).toString();
-		return temp;
+	public void setReturned(Boolean returned) {
+		isReturned = returned;
 	}
 
 	@Override
@@ -95,17 +57,19 @@ public class Book {
 		return "Book [title=" + title + ", ISBN=" + ISBN + ", author=" + author + ", price=" + price + ", isReturned="
 				+ isReturned + "]";
 	}
-	
 
-//	public static void main(String[] args) throws FileNotFoundException {
-//		ArrayList<Book> books = new ArrayList<>();
-//		for (int i = 0; i < 10; i++) {
-//			Book b = new Book();
-//			books.add(b);
-//		}
-//		System.out.println(books);
-//
-//	}
+
+	public static void main(String[] args) throws FileNotFoundException {
+		ArrayList<Book> books = new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			Book b = new Book();
+			books.add(b);
+
+		}
+		System.out.println(books);
+
+	}
 
 
 }
+
