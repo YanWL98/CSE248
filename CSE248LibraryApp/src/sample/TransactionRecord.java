@@ -36,7 +36,7 @@ public class TransactionRecord {
         return isReturn;
     }
 
-    public void setIsReturn(Integer isReturn) {
+    public void setIsReturn(int isReturn) {
         this.isReturn = isReturn;
     }
 

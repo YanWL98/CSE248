@@ -46,7 +46,6 @@ public class WelcomeApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Login");
 
-
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
@@ -102,10 +101,10 @@ public class WelcomeApplication extends Application {
                         }
                         break;
                     } else {
-                        BookApplication ac = new BookApplication(patron);
+                        BookApplication bk = new BookApplication(patron);
                         
                         try {
-                            ac.start(primaryStage);
+                            bk.start(primaryStage);
                         } catch (Exception exception) {
                             exception.printStackTrace();
                         }
