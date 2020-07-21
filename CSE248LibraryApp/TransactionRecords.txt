@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"isReturn":0,"patronId":"2","isbn":"978-2-294-75916-1","id":2,"createDate":"Tue Jul 21 17:07:06 EDT 2020"},{"isReturn":0,"patronId":"2","isbn":"978-0-12-815485-4","id":3,"createDate":"Tue Jul 21 17:07:41 EDT 2020"},{"isReturn":0,"patronId":"3","isbn":"978-0-12-815277-5","id":4,"createDate":"Tue Jul 21 17:19:40 EDT 2020"}]
+=======
+[{"isReturn":0,"patronId":"3","isbn":"978-2-294-75916-1","id":1,"createDate":"Sun Jul 19 19:19:04 EDT 2020"},{"isReturn":0,"patronId":"3","isbn":"978-2-294-75916-1","id":2,"createDate":"Sun Jul 19 19:19:08 EDT 2020"},{"isReturn":0,"patronId":"3","isbn":"978-2-294-75916-1","id":3,"createDate":"Sun Jul 19 19:20:35 EDT 2020"}]
+>>>>>>> 8b43c08878d7e1fae1b3e48719cf58391da893d3
