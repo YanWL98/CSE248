@@ -212,18 +212,18 @@ public class Controller {
 		}
 	}
 
-	public void updateBook(Book book) throws FileNotFoundException {
-		List<Book> allBooks = BookSave.getAllBooks();
-		for (Book allBook : allBooks) {
-			if (allBook.getISBN().equals(book.getISBN())) {
-				allBook.setReturned(book.getReturned());
-				allBook.setPrice(book.getPrice());
-				allBook.setAuthor(book.getAuthor());
-				allBook.setTitle(book.getTitle());
-			}
-		}
-		BookSave.saveAllBook(allBooks);
-	}
+//	public void updateBook(Book book) throws FileNotFoundException {
+//		List<Book> allBooks = BookSave.getAllBooks();
+//		for (Book allBook : allBooks) {
+//			if (allBook.getISBN().equals(book.getISBN())) {
+//				allBook.setReturned(book.getReturned());
+//				allBook.setPrice(book.getPrice());
+//				allBook.setAuthor(book.getAuthor());
+//				allBook.setTitle(book.getTitle());
+//			}
+//		}
+//		BookSave.saveAllBook(allBooks);
+//	}
 
 	public void delBook(String str, Patron patron) throws FileNotFoundException {
 		if (null != str && str.length() > 0) {
@@ -261,7 +261,6 @@ public class Controller {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Controller controller = new Controller();
-
 		controller.initBooks();
 	}
 }
