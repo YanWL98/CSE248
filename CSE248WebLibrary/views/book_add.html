@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddBook</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h3>AddBook</h3>
+<div class="box">
+    <form>
+    <a href="/book_list">&lt;back</a> <br/>
+    <label for="title">title:</label><br>
+    <input type="text"  id="title"/> <br/>
+    <label for="author">author:</label><br>
+    <input type="text" id="author"/> <br/>
+    <label for="ISBN">ISBN:</label><br>
+    <input type="text" id="ISBN"/> <br/>
+    <label for="price">price:</label><br>
+    <input type="text"  id="price"/> <br/>
+
+    <a href="" id="linkToCart">submit</a>
+    </form>
+</div>
+</body>
+</html>
+<script src="/resources/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $("#linkToCart").click(function(){
+
+
+            let title = $("#title").val();
+            let author = $("#author").val();
+            let ISBN = $("#ISBN").val();
+            let price = $("#price").val();
+
+
+            $("#linkToCart").attr("href","/addBook?title=" + title +"&author="+author+"&ISBN="+ISBN+"&price="+price);
+        });
+    });
+</script>

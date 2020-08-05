@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BorrowList</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Borrows</h1>
+    <table id="borrowTable" style="border: 1px solid  #2E2D3C;">
+        <td colspan="7" style="text-align: left">
+            <a href="/users">&lt;back</a>
+        </td>
+        <tr>
+            <th>Id</th>
+            <th>ISBN</th>
+            <th>UserId</th>
+            <th>CreateDate</th>
+        </tr>
+        <% for(var i=0;i<borrowList.length;i++){%>
+        <tr>
+            <td><%=borrowList[i].id%></td>
+            <td><%=borrowList[i].isbn%></td>
+            <td><%=borrowList[i].userId%></td>
+            <td><%=borrowList[i].createDate%></td>
+        </tr>
+        <%}%>
+    </table>
+</body>
+</html>

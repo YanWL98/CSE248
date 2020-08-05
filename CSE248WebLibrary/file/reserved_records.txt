@@ -1,0 +1,24 @@
+{ 
+    "_id" : ObjectId("5f250c87edf70554f64c5347"), 
+    "patronId" : "3", 
+    "isbn" : "978-2-294-75916-1", 
+    "id" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("5f250c87edf70554f64c5348"), 
+    "patronId" : "2", 
+    "isbn" : "978-2-294-75916-1", 
+    "id" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("5f250c87edf70554f64c5349"), 
+    "patronId" : "2", 
+    "isbn" : "978-2-294-75916-1", 
+    "id" : NumberInt(3)
+}
+{ 
+    "_id" : ObjectId("5f250c87edf70554f64c534a"), 
+    "patronId" : "2", 
+    "isbn" : "978-0-12-813740-6", 
+    "id" : NumberInt(4)
+}

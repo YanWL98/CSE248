@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookingList</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Bookings</h1>
+    <table id="bookingTable" style="border: 1px solid  #2E2D3C;">
+        <td colspan="7" style="text-align: left">
+            <a href="/users">&lt;back</a>
+        </td>
+        <tr>
+            <th>Id</th>
+            <th>ISBN</th>
+            <th>UserId</th>
+        </tr>
+        <% for(var i=0;i<bookingList.length;i++){%>
+        <tr>
+            <td><%=bookingList[i].id%></td>
+            <td><%=bookingList[i].isbn%></td>
+            <td><%=bookingList[i].patronId%></td>
+        </tr>
+        <%}%>
+    </table>
+</body>
+</html>

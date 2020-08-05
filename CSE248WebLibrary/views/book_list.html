@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Books</h1>
+    <table id="bookTable" style="border: 1px solid  #2E2D3C;">
+        <tr>
+            <td colspan="7" style="text-align: left">
+                <a href="/book_add">addBook</a>
+                <a href="/users">users</a>
+            <input type="search"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Price</th>
+            <th>Returned</th>
+            <th>operation</th>
+        </tr>
+        <% for(var i=0;i<bookList.length;i++){%>
+        <tr>
+            <td><%=bookList[i].title%></td>
+            <td><%=bookList[i].author%></td>
+            <td><%=bookList[i].iSBN%></td>
+            <td><%=bookList[i].price%></td>
+            <td><%=bookList[i].returned%></td>
+
+            <td>
+                <a href="/borrow/<%=bookList[i].iSBN %>">borrow</a>
+                <a href="/booking/<%=bookList[i].iSBN %>">booking</a>
+                <a href="/deleteBook/<%=bookList[i]._id %>">delete</a>
+            </td>
+        </tr>
+        <%}%>
+    </table>
+    <h1><a href="/logout">logout</a></h1>
+</body>
+</html>

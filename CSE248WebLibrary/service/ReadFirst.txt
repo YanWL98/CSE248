@@ -1,0 +1,3 @@
+Sorry I can't finish the service part, I try my best but it really confused me.
+Because I failed to complete service methods, I just wrote code based on the assumption it will work.
+If I can make callback method complete after I totally understand this part, I think it will connect to the app.js and it will transfer data.

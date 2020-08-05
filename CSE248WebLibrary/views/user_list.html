@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserList</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Users</h1>
+    <table id="userTable" style="border: 1px solid  #2E2D3C;">
+        <td colspan="7" style="text-align: left">
+            <a href="/book_list">&lt;back</a>
+        </td>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>phone</th>
+        </tr>
+        <% for(var i=0;i<userList.length;i++){%>
+        <tr>
+            <td><%=userList[i].id%></td>
+            <td><%=userList[i].name%></td>
+            <td><%=userList[i].phone%></td>
+            <td>
+                <a href="/transcations/<%=userList[i].id%>">borrows</a>
+                <a href="/reserveds/<%=userList[i].id%>">bookings</a>
+            </td>
+        </tr>
+        <%}%>
+    </table>
+</body>
+</html>
