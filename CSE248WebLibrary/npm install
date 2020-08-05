@@ -1,0 +1,8 @@
+Please $npm i these
+    "body-parser",  
+    "ejs",  
+    "express",  
+    "loadash",  
+    "lodash",  
+    "mongoose",  
+    "silly-datetime"  
